@@ -5,6 +5,8 @@ As shown in the paper
 **A critical analysis of self-supervision, or what we can learn from a single image**, Asano et al. ICCV 2020
 
 
+![Example images from our dataset](images/_examples.jpg?raw=true "Example Images")
+
 ## Why?
 Self-supervised representation learning has made enormous strides in recent years.
 In this paper we show that a large part why self-supervised learning works are the augmentations.
