@@ -2,7 +2,7 @@
 
 As shown in the paper
 
-**A critical analysis of self-supervision, or what we can learn from a single image**, Asano et al. ICCV 2020
+**A critical analysis of self-supervision, or what we can learn from a single image**, Asano et al. ICLR 2020
 
 
 ![Example images from our dataset](images/_example.png?raw=true "Example Images")
