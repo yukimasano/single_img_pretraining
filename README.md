@@ -1,29 +1,28 @@
 # Single Image Pretraining of Visual Representations
 
-As shown in the paper 
+As shown in the paper
 
 **A critical analysis of self-supervision, or what we can learn from a single image**, Asano et al. ICCV 2020
 
 
-ls
 ## Why?
 Self-supervised representation learning has made enormous strides in recent years.
 In this paper we show that a large part why self-supervised learning works are the augmentations.
-We show this by pretraining various SSL methods on a dataset generated solely from augmenting a single source image 
+We show this by pretraining various SSL methods on a dataset generated solely from augmenting a single source image
 and find that various methods still pretrain quite well and even yield representations as strong as using the whole dataset for the early layers of networks.
 
 
 ## Abstract
 We look critically at popular self-supervision techniques for learning deep convolutional neural networks without manual labels. We show that three different and representative methods, BiGAN, RotNet and DeepCluster, can learn the first few layers of a convolutional network from a single image as well as using millions of images and manual labels, provided that strong data augmentation is used. However, for deeper layers the gap with manual supervision cannot be closed even if millions of unlabelled images are used for training. We conclude that: (1) the weights of the early layers of deep networks contain limited information about the statistics of natural images, that (2) such low-level statistics can be learned through self-supervision just as well as through strong supervision, and that (3) the low-level statistics can be captured via synthetic transformations instead of using a large image dataset.
- 
+
 ## Usage
 Here we provide the code for generating a dataset from using just a single source image.
 Since the publication, I have slightly modified the dataset generation script to make it easier to use.
-Dependencies: `torch, torchvision, joblib, PIL, numpy`  
+Dependencies: `torch, torchvision, joblib, PIL, numpy`, any recent version should do.
 
 Run like this:
 ```
-python make_dataset_single.py --imgpath images/ameyoko.jpg --targetpath out/ameyoko_dataset
+python make_dataset_single.py --imgpath images/ameyoko.jpg --targetpath ./out/ameyoko_dataset
 ```
 
 Here is the full description of the usage:
@@ -56,7 +55,8 @@ optional arguments:
   --targetpath TARGETPATH
 ```
 
-## Bibtex
+## Reference
+If you find this code/idea useful, please consider citing our paper:
 ```
 @inproceedings{asano2020a,
 title={A critical analysis of self-supervision, or what we can learn from a single image},
